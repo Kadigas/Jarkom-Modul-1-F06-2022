@@ -38,6 +38,13 @@ Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !<br
 Gunakan ```http.host == lipi.go.id``` untuk filter paket yang menuju protocol http dengan host lipi.go.id
 
 ### Nomor 7
+Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!<br><br>
+<b>Jawab:</b>
+<br> 
+    1. Cara mengetahui IP masing-masing dapat membuka Command Prompt lalu `ipconfig`
+    <br>
+    2. Menggunakan ```ip.src == 192.168.1.22 (disesuaikan dengan ip masing-masing)``` untuk filter mengambil paket yang berasal dari ip masing-masing
+    
 
 ### Nomor 8 hingga 10 menggunakan resource file soal8-10.pcapng
 
