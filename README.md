@@ -56,22 +56,34 @@ Langkah mendapatkan:
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 80!<br><br>
 <b>Jawab:</b><br>
 Gunakan ```tcp.dstport == 80``` untuk menampilkan paket yang destinasi port-nya 80
+<p align="center">
+  <img src="images/no3-1.png" width="600">
+</p><br>
 
 ### Nomor 4
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!<br><br>
 <b>Jawab:</b><br>
 Gunakan ```tcp.srcport == 21``` untuk filter paket yang source port-nya 21
+<p align="center">
+  <img src="images/no4-1.png" width="600">
+</p><br>
 
 ### Nomor 5
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!<br><br>
 <b>Jawab:</b><br>
 Paket yang ditemukan berasal dari port 443 menggunakan protocol TCP maupun UDP, maka gunakan ```tcp.srcport == 443 || udp.srcport == 443```
 sehingga wireshark memfilter paket yang berasal dari port 443 dengan protocol TCP maupun UDP.
+<p align="center">
+  <img src="images/no5-1.png" width="600">
+</p><br>
 
 ### Nomor 6
 Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !<br><br>
 <b>Jawab:</b><br>
 Gunakan ```http.host == lipi.go.id``` untuk filter paket yang menuju protocol http dengan host lipi.go.id
+<p align="center">
+  <img src="images/no6-1.png" width="600">
+</p><br>
 
 ### Nomor 7
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!<br><br>
@@ -83,19 +95,33 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!<br>
 2. Menggunakan ```ip.src == 192.168.1.22 (disesuaikan dengan ip masing-masing)``` untuk filter mengambil paket yang berasal dari ip masing-masing<br>
 ![7-2](https://user-images.githubusercontent.com/81666422/192086509-d2883e06-7c1f-42f6-a671-5f3380ed7b33.png)
 
-
-    
-
 ### Nomor 8 hingga 10 menggunakan resource file soal8-10.pcapng
 
 ### Nomor 8
 Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum. Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.<br><br>
 <b>Jawab:</b><br>
 <ol>
-  <li>Menggunakan filter TCP</li>
-  <li>Identifikasi karakteristik, percakapan kedua mahasiswa menggunakan port 60236 dan 65432, lalu ditandai dengan adanya [PSH, ACK] yang menandakan adanya flag push, maka filter ulang, sehingga didapat semua paket percakapan</li>
-  <li>Follow menggunakan TCP Stream</li>
-  <li>Didapatkan semua paket dengan tampilan seperti di bawah</li>
+  <li>Menggunakan filter TCP
+    <p align="center">
+      <img src="images/no8-1-1.png" width="600">
+      <img src="images/no8-1-2.png" width="600">
+    </p>
+  </li>
+  <li>Identifikasi karakteristik, percakapan kedua mahasiswa menggunakan port 60236 dan 65432, lalu ditandai dengan adanya [PSH, ACK] yang menandakan adanya flag push, maka filter ulang, sehingga didapat semua paket percakapan
+    <p align="center">
+      <img src="images/no8-2.png" width="600">
+    </p>
+  </li>
+  <li>Follow menggunakan TCP Stream
+    <p align="center">
+      <img src="images/no8-3.png" width="600">
+    </p>
+  </li>
+  <li>Didapatkan semua paket dengan tampilan seperti di bawah
+    <p align="center">
+      <img src="images/no8-4.png" width="600">
+    </p>
+  </li>
   <li>Melakukan filter pada flag push dan port 9002, maka akan ditemukan paket yang dikirim</li>
   <li>Melakukan pengecekan ulang pada flag push, maka ditemukan bahwa mahasiswa menggunakan port lain, yaitu 60256</li>
   <li>Melakukan follow TCP Stream pada paket tersebut</li>
