@@ -122,11 +122,40 @@ Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna be
       <img src="images/no8-4.png" width="600">
     </p>
   </li>
-  <li>Melakukan filter pada flag push dan port 9002, maka akan ditemukan paket yang dikirim</li>
-  <li>Melakukan pengecekan ulang pada flag push, maka ditemukan bahwa mahasiswa menggunakan port lain, yaitu 60256</li>
-  <li>Melakukan follow TCP Stream pada paket tersebut</li>
-  <li>Melakukan pengecekan ulang pada flag push, didapatkan port baru, yaitu 60258, melakukan follow TCP Stream pada paket</li>
-  <li>Mengecek kembali port 9002 dengan flag push</li>
+  <li>Melakukan filter pada flag push dan port 9002, maka akan ditemukan paket yang dikirim
+  <p align="center">
+      <img src="images/no8-5.png" width="600">
+    </p>
+  </li>
+  <li>Melakukan pengecekan ulang pada flag push, maka ditemukan bahwa mahasiswa menggunakan port lain, yaitu 60256
+  <p align="center">
+      <img src="images/no8-6.png" width="600">
+    </p>
+  </li>
+  <li>Melakukan follow TCP Stream pada paket tersebut
+  <p align="center">
+      <img src="images/no8-7.png" width="600">
+    </p>
+  </li>
+  <li>Melakukan pengecekan ulang pada flag push, didapatkan port baru, yaitu 60258, melakukan follow TCP Stream pada paket
+  <p align="center">
+      <img src="images/no8-8.png" width="600">
+    </p>
+  </li>
+  <li>Mengecek kembali port 9002 dengan flag push
+  <p align="center">
+      <img src="images/no8-9-1.png" width="600">
+    </p>
+    <p align="center">
+      <img src="images/no8-9-2.png" width="600">
+    </p>
+    <p align="center">
+      <img src="images/no8-9-3.png" width="600">
+    </p>
+    <p align="center">
+      <img src="images/no8-9-4.png" width="600">
+    </p>
+  </li>
 </ol>
 
 ### Nomor 9
