@@ -90,10 +90,14 @@ Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!<br>
 <b>Jawab:</b>
 <br> 
 1. Cara mengetahui IP masing-masing dapat membuka Command Prompt lalu `ipconfig`<br>
-![7-1](https://user-images.githubusercontent.com/81666422/192086504-bc4600df-a9e1-45b0-9a47-598b9eb0eca1.png)
+<p align="center">
+  <img src="images/no7-1.png" width="600">
+</p><br>
 
 2. Menggunakan ```ip.src == 192.168.1.22 (disesuaikan dengan ip masing-masing)``` untuk filter mengambil paket yang berasal dari ip masing-masing<br>
-![7-2](https://user-images.githubusercontent.com/81666422/192086509-d2883e06-7c1f-42f6-a671-5f3380ed7b33.png)
+<p align="center">
+  <img src="images/no7-2.png" width="600">
+</p><br>
 
 ### Nomor 8 hingga 10 menggunakan resource file soal8-10.pcapng
 
