@@ -11,8 +11,44 @@
 ### Nomor 1 dan 2 menggunakan resource file soal1-2.pcapng
 
 ### Nomor 1
+Sebutkan web server yang digunakan pada "monta.if.its.ac.id"!<br><br>
+<b>Jawab:</b><br>
+Nginx<br>
+Langkah mendapatkan:
+1. Buka Wireshark kemudian filter HTTP.<br>
+<p align="center">
+  <img src="images/no1-1.png" width="600">
+</p><br>
+2. Kemudian klik kanan -> Follow -> HTTP Stream<br>
+<p align="center">
+  <img src="images/no1-2.png" width="600">
+</p><br>
+3. Kemudian pada bagian “Find” di bawah, ketikkan “server”. Kemudian terlihat bahwa server yang digunakan adalah nginx/1.10.3.<br>
+<p align="center">
+  <img src="images/no1-3.png" width="600">
+</p>
 
 ### Nomor 2
+Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ?<br><br>
+<b>Jawab:</b><br>
+Evaluasi untuk kerja User Space Filesystem (FUSE)<br>
+Langkah mendapatkan:
+1. Buka Wireshark kemudian filter HTTP.<br>
+<p align="center">
+  <img src="images/no2-1.png" width="600">
+</p><br>
+2. Setelah ditemukan /index.php/topik/detailTopik/194, pilih File -> Export Objects -> HTTP. Bisa juga dengan menggunakan filter http contains “detail”.<br>
+<p align="center">
+  <img src="images/no2-2.png" width="600">
+</p><br>
+3. Kemudian export Filename 194 dan save sebagai .html.<br>
+<p align="center">
+  <img src="images/no2-3.png" width="600">
+</p><br>
+4. Kemudian setelah file .html dibuka, dapat terlihat judul TA yang sedang dibuka oleh Ishaq.<br>
+<p align="center">
+  <img src="images/no2-4.png" width="600">
+</p><br>
 
 ### Nomor 3 hingga 6 menggunakan resource file soal3-6.pcapng
 
@@ -64,5 +100,35 @@ Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna be
 </ol>
 
 ### Nomor 9
+Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.<br><br>
+<b>Jawab:</b><br>
+File salt pada stream 29.<br>
+Langkah mendapatkan:
+1. Setelah dilakukan filter TCP dan kemudian dilakukan Klik kanan -> Follow -> TCP Stream, pertukaran file diketahui terjadi pada tcp.stream eq 12.<br>
+<p align="center">
+  <img src="images/no9-1.png" width="600">
+</p><br>
+2. Setelah ditelusuri semua stream, diketahui bahwa pada tcp.stream eq 29 terdapat file Sat yang terenkripsi. Kemudian show data as Raw.
+<br>
+<p align="center">
+  <img src="images/no9-2.png" width="600">
+</p><br>
+3. Save as F06.des3.<br>
+<p align="center">
+  <img src="images/no9-3.png" width="600">
+</p><br>
+4. Decrypt menggunakan openssl.<br>
+<p align="center">
+  <img src="images/no9-4.png" width="600">
+</p><br>
+5. Akan didapatkan hasil dekripsi sebagai berikut.<br>
+<p align="center">
+  <img src="images/no9-5.png" width="600">
+</p><br>
 
 ### Nomor 10
+Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!<br><br>
+<b>Jawab:</b><br>
+Password dekripsi : nakano<br>
+<a href="https://id.wikipedia.org/wiki/Daftar_karakter_The_Quintessential_Quintuplets" target="_blank">Wikipedia - Daftar_karakter_The_Quintessential_Quintuplets</a><br>
+Isi file flag : JaRkOm2022{8uK4N_CtF_k0k_h3h3h3}
